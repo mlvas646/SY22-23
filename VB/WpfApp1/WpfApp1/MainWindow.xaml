@@ -7,8 +7,43 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <TextBox x:Name="TextBox" HorizontalAlignment="Left" Height="64" Margin="415,228,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170"/>
-        <Button x:Name="Button1" Content="Button" HorizontalAlignment="Left" Height="36" Margin="415,168,0,0" VerticalAlignment="Top" Width="170" Click="Button_Click"/>
-
+        <Menu>
+            <MenuItem Header="_File">
+                <MenuItem Header="_New"></MenuItem>
+                <MenuItem Header="_Open" Click="Open_Click"></MenuItem>
+                <MenuItem Header="_Save" Click="Save_Click"></MenuItem>
+                <MenuItem Header="_Exit" Click="Exit_Click"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="_Edit">
+                <MenuItem Command="ApplicationCommands.Copy"/>
+                <MenuItem Command="ApplicationCommands.Cut"/>
+                <MenuItem Command="ApplicationCommands.Paste"/>
+            </MenuItem>
+            <MenuItem Header="_Font">
+                <MenuItem Header="_Bold" IsCheckable="True"
+              Checked="Bold_Checked"
+              Unchecked="Bold_Unchecked"/>
+                <MenuItem Header="_Italic" IsCheckable="True"
+              Checked="Italic_Checked"
+              Unchecked="Italic_Unchecked"/>
+                <Separator/>
+                <MenuItem Header="I_ncrease Font Size"
+              Click="IncreaseFont_Click"/>
+                <MenuItem Header="_Decrease Font Size"
+              Click="DecreaseFont_Click"/>
+            </MenuItem>
+            <MenuItem Header="_View">
+          
+            </MenuItem>
+            <MenuItem Header="_Help">
+              
+            </MenuItem>
+        </Menu>
+        <TextBox x:Name="TextBox" HorizontalAlignment="Center" Height="374" Margin="0,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="780"/>
+        <Button x:Name="Button1" Content="Button" HorizontalAlignment="Left" Height="13" Margin="687,4,0,0" VerticalAlignment="Top" Width="103" Click="Button_Click"/>
+        <TextBox x:Name="textBox1" TextWrapping="Wrap"
+         Margin="2,22,2,0" Text="The quick brown fox jumps over the lazy dog."/>
     </Grid>
+
 </Window>
+
